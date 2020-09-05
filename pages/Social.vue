@@ -79,42 +79,17 @@
       </div>
     </div>
 
-    <div class="containerClass">
-      <oneWaveInsta
-        token="EAADTLbimJW0BADMh60PMOFQrTTUZATv5y0ed4wzbFRZA9P5r1eZCRay9QX9ZBlycJv6ybMigZA7SP9Gh4x0e1yE8WcGkQGTyxlLunY7QDuMqIPTSWQy6m8qYjYTgM9NlvEbKr9n3wyNjQvXJ8uOXZChrlNSaClOLeIZAvX5C4g9PEWoIF2JpCrM"
-        fields="media_url,media_type,caption"
-        :mediatypes="['IMAGE']"
-      >
-        <template v-slot:loading="props">
-          <h1 v-if="props.loading" class="fancy-loading">
-            Loading, please wait...
-          </h1>
-        </template>
-
-        <template v-slot:feeds="props">
-          <div>
-            <img :src="props.feed.media_url" />
-            <div :text="props.feed.caption" />
-          </div>
-        </template>
-
-        <template v-slot:error="props">
-          <div class="fancy-alert">{{ props.error }}</div>
-        </template>
-      </oneWaveInsta>
-    </div>
+    <div class="flickrGallery"></div>
   </div>
 </template>
 
 <script>
 import PageHeading from '@/components/PageHeading.vue'
-import oneWaveInsta from '@/components/oneWaveInsta.vue'
 
 export default {
   name: 'Social',
   components: {
     PageHeading,
-    oneWaveInsta,
   },
   data() {
     return {
