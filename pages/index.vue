@@ -37,7 +37,8 @@ export default {
   name: 'Home',
   data() {
     return {
-      msg: 'This site has been created using Nuxt, Vue, Vue Router, Bootstrap, and the Flickr API',
+      msg:
+        'This site has been created using Nuxt, Vue, Bootstrap, and the Flickr API.',
     }
   },
 }
