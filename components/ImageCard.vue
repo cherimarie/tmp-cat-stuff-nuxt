@@ -1,3 +1,5 @@
+<!-- Image card component, inspired by https://github.com/lonewolfonline/vue-photography-portfolio, which
+leverages Flickr API for image prop -->
 <template>
   <div class="item">
     <a :href="image.url_o">
@@ -23,6 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
+//Styling for image cards. Includes transition on hover to display image data.
 .item {
   background-color: #eee;
   display: inline-block;

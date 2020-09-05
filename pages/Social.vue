@@ -79,8 +79,9 @@
       </div>
     </div>
 
-    <div id="page" class="wrapper">
-      <h4>Recent Flickr uploads</h4>
+    <!-- Display Flickr content using array iteration and image card component -->
+    <div class="flickrWrapper">
+      <h4 class="flickrHeading">{{ flickrHeading }}</h4>
       <p v-if="loading" class="text-centered">Loading...</p>
       <div v-else class="masonry">
         <image-card v-for="image in images" :key="image.id" :image="image" />
@@ -90,6 +91,7 @@
 </template>
 
 <script>
+// Import axios and other components
 import PageHeading from '@/components/PageHeading.vue'
 import ImageCard from '@/components/ImageCard'
 import axios from 'axios'
@@ -116,6 +118,7 @@ export default {
       deactivatedText: 'Kitten mode: Deactivated',
       loading: false,
       images: [],
+      flickrHeading: 'Recent Flickr uploads',
     }
   },
   beforeMount() {
@@ -133,6 +136,7 @@ export default {
           console.log('An error ocurred: ', error)
         })
     },
+    // Use axios to obtain images from Flickr. Hard coded api key and photoset id (which identifies a specific album)
     fetchImages() {
       return axios({
         method: 'get',
@@ -154,17 +158,16 @@ export default {
 </script>
 
 <style lang="scss">
-.text-centered {
-  text-align: center;
-}
-.wrapper {
-  margin: 0 auto;
+// Responsive styling for Flickr gallery
+.flickrWrapper {
+  margin: 1rem;
   max-width: 1200px;
   @media only screen and (max-width: 799px) {
     max-width: 100%;
     margin: 0 1.5rem;
   }
 }
+
 .masonry {
   margin: 1.5em auto;
   max-width: 1200px;
