@@ -1,6 +1,6 @@
 <template>
   <div class="item">
-    <a href="#">
+    <a :href="image.url_o">
       <img class="image" :src="image.url_n" :alt="image.title" />
       <div class="body">
         <p v-if="image.title" class="image-title">{{ image.title }}</p>
