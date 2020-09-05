@@ -105,6 +105,8 @@ export default {
       kittenMode: false,
       activatedText: 'Kitten mode: Activated',
       deactivatedText: 'Kitten mode: Deactivated',
+      apiKey: 'd77d872ca3ee80854cc20e66d69ddf60',
+      photoset: '72157715847390777',
     }
   },
 }
