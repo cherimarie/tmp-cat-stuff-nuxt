@@ -41,5 +41,18 @@ export default {
         'This site has been created using Nuxt, Vue, Bootstrap, and the Flickr API.',
     }
   },
+  head() {
+    return {
+      title: 'Cat stuff',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Cat content delivered to you via Nuxt, Vue, Bootstrap and the Flickr API.',
+        },
+      ],
+    }
+  },
 }
 </script>

@@ -154,6 +154,19 @@ export default {
       })
     },
   },
+  head() {
+    return {
+      title: 'Moon and Miu Miu',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'The latest social media content from legendary cats Moon and Miu Miu',
+        },
+      ],
+    }
+  },
 }
 </script>
 

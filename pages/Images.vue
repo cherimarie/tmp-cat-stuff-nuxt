@@ -136,5 +136,17 @@ export default {
       ],
     }
   },
+  head() {
+    return {
+      title: 'Cat images',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Random cat photos hosted on unsplash.com',
+        },
+      ],
+    }
+  },
 }
 </script>

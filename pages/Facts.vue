@@ -99,5 +99,17 @@ export default {
       ],
     }
   },
+  head() {
+    return {
+      title: 'Cat facts',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Random cat facts hosted on interesting-facts.com',
+        },
+      ],
+    }
+  },
 }
 </script>
